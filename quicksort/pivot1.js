@@ -45,7 +45,7 @@ function pivot(arr, start = 0, end = arr.length - 1) {
 //   return swapIdx;
 // }
 
-console.log(pivot([4, 4, 5, 3, 2, 6, 7, 8])); // 3
+console.log(pivot([4, 4, 5, 3, 2, 6, 7, 8])); // 2
 console.log(pivot([5, 1, 2, 3, 4, 6, 7, 8])); // 4
 console.log(pivot([8, 1, 2, 3, 4, 6, 7, 5])); // 7
 console.log(pivot([2, 1, 8, 3, 4, 6, 7, 5])); // 1

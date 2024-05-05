@@ -18,3 +18,4 @@ console.log(getDigit(1234567890, 6)); // 4
 console.log(getDigit(1234567890, 7)); // 3
 console.log(getDigit(1234567890, 8)); // 2
 console.log(getDigit(-1234567890, 10)); // 0
+// console.log(Math.pow(10, 1));

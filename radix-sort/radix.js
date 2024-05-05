@@ -31,9 +31,21 @@ function mostDigits(arr) {
 }
 
 function radixSort(arr) {
-  for (let k = 0; k < mostDigits(arr); k++) {}
+  for (let k = 0; k < mostDigits(arr); k++) {
+    // an empty array with empty sub arrays that will act as a bucket
+    const bucket = Array.from({ length: 10 }, () => []);
+
+    for (let i = 0; i < arr.length; i++) {
+      bucket[getDigit(arr[i], k)].push(arr[i]);
+    }
+    // replace the values of the array with the elements in the bucket array
+    arr = [].concat(...bucket);
+  }
 
   return arr;
 }
 
-console.log([123, 12, 0]); // [0,12,123]
+console.log(radixSort([123, 12, 0])); // [0,12,123]
+console.log(radixSort([123, 12, 0, 1, 11, 1234, 125])); // [0,1,11,12,123,1234]
+// console.log(Array.from({ length: 5 }, () => []));
+// console.log([].concat([1], [2]));
